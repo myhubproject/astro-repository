@@ -1,12 +1,42 @@
- 
- 
+---
+const pageTitle ="okay about US"
+const identity = {
+  firstName: "莎拉",
+  country: "加拿大",
+  occupation: "技术撰稿人",
+  hobbies: ["摄影", "观鸟", "棒球"],
+  
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
     <body>
         <p>i am learning astor web page</p>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
         <h1>About me</h1>
+        <h2>{pageTitle}</h2>
         <h2>...and with my new astro web page</h2>
+        { happy && <p>i am glad to see you </p>}
+        {goal == 3 ? <p>fished in 3 days</p> :<p>fished in 5 days</p>}
         
+        <p>my skill</p>
+        <ul>
+           {
+            skills.map((skill)=><li>{skill}</li>)
+            
+            }
+        </ul>
     </body>
- 
+</html>
